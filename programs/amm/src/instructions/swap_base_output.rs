@@ -163,6 +163,7 @@ pub fn swap_base_output(
         base_input: false,
         input_token_id: ctx.accounts.input_token_mint.key(),
         output_token_id: ctx.accounts.output_token_mint.key(),
+        payer: ctx.accounts.payer.key(),
     });
     require_gte!(constant_after, constant_before);
 

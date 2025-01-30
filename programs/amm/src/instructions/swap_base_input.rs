@@ -224,6 +224,7 @@ pub fn swap_base_input(ctx: Context<Swap>, amount_in: u64, minimum_amount_out: u
         base_input: true,
         input_token_id: ctx.accounts.input_token_mint.key(),
         output_token_id: ctx.accounts.output_token_mint.key(),
+        payer: ctx.accounts.payer.key(),
     });
     require_gte!(constant_after, constant_before);
 

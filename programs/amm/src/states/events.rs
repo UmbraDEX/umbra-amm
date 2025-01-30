@@ -41,4 +41,6 @@ pub struct SwapEvent {
 
     pub input_token_id: Pubkey,
     pub output_token_id: Pubkey,
+
+    pub payer: Pubkey,
 }
