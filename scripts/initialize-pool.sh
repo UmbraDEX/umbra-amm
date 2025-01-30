@@ -1,0 +1,1 @@
+cargo run initialize-pool mnthuBnrWBTiEHBU3Tbq6Nv7eaqV8kEEDBb9TYn6sEm mntPs3DJMqPnnE6zqf2q6eduM72cPWx4ALoKaoNpC5T 10000000000 10000000000
