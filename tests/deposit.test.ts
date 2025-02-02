@@ -12,8 +12,8 @@ import { assert } from "chai";
 import { MAX_FEE_BASIS_POINTS, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 
 describe("deposit test", () => {
+  anchor.setProvider(anchor.AnchorProvider.env());
   const owner = anchor.Wallet.local().payer;
-  anchor.setProvider(anchor.AnchorProvider.env());    
 
   const program = anchor.workspace.UmbraAmm as Program<UmbraAmm>;
 
