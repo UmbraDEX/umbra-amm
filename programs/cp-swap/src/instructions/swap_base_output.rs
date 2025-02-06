@@ -160,7 +160,10 @@ pub fn swap_base_output(
         output_amount: u64::try_from(result.destination_amount_swapped).unwrap(),
         input_transfer_fee,
         output_transfer_fee,
-        base_input: false
+        base_input: false,
+        input_token_id: ctx.accounts.input_token_mint.key(),
+        output_token_id: ctx.accounts.output_token_mint.key(),
+        payer: ctx.accounts.payer.key(),
     });
     require_gte!(constant_after, constant_before);
 

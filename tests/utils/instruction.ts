@@ -1,5 +1,5 @@
 import { Program, BN } from "@coral-xyz/anchor";
-import { RaydiumCpSwap } from "../../target/types/raydium_cp_swap";
+import { UmbraAmm } from "../../target/types/umbra_amm";
 import {
   Connection,
   ConfirmOptions,
@@ -29,7 +29,7 @@ import {
 import { ASSOCIATED_PROGRAM_ID } from "@coral-xyz/anchor/dist/cjs/utils/token";
 
 export async function setupInitializeTest(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   connection: Connection,
   owner: Signer,
   config: {
@@ -73,7 +73,7 @@ export async function setupInitializeTest(
 }
 
 export async function setupDepositTest(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   connection: Connection,
   owner: Signer,
   config: {
@@ -152,7 +152,7 @@ export async function setupDepositTest(
 }
 
 export async function setupSwapTest(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   connection: Connection,
   owner: Signer,
   config: {
@@ -216,7 +216,7 @@ export async function setupSwapTest(
 }
 
 export async function createAmmConfig(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   connection: Connection,
   owner: Signer,
   config_index: number,
@@ -255,7 +255,7 @@ export async function createAmmConfig(
 }
 
 export async function initialize(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   creator: Signer,
   configAddress: PublicKey,
   token0: PublicKey,
@@ -267,7 +267,7 @@ export async function initialize(
     initAmount0: new BN(10000000000),
     initAmount1: new BN(20000000000),
   },
-  createPoolFee = new PublicKey("DNXgeM9EiiaAbaWvwjHj9fQQLAX5ZsfHyvmYUNRAdNC8")
+  createPoolFee = new PublicKey("Bzsi8fW9x4ahRgC8xNdxrr5NNWm8DBSrQnE322vi1YWH")
 ) {
   const [auth] = await getAuthAddress(program.programId);
   const [poolAddress] = await getPoolAddress(
@@ -345,7 +345,7 @@ export async function initialize(
 }
 
 export async function deposit(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   owner: Signer,
   configAddress: PublicKey,
   token0: PublicKey,
@@ -423,7 +423,7 @@ export async function deposit(
 }
 
 export async function withdraw(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   owner: Signer,
   configAddress: PublicKey,
   token0: PublicKey,
@@ -504,7 +504,7 @@ export async function withdraw(
 }
 
 export async function swap_base_input(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   owner: Signer,
   configAddress: PublicKey,
   inputToken: PublicKey,
@@ -574,7 +574,7 @@ export async function swap_base_input(
 }
 
 export async function swap_base_output(
-  program: Program<RaydiumCpSwap>,
+  program: Program<UmbraAmm>,
   owner: Signer,
   configAddress: PublicKey,
   inputToken: PublicKey,

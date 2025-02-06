@@ -38,4 +38,9 @@ pub struct SwapEvent {
     pub input_transfer_fee: u64,
     pub output_transfer_fee: u64,
     pub base_input: bool,
+
+    pub input_token_id: Pubkey,
+    pub output_token_id: Pubkey,
+
+    pub payer: Pubkey,
 }

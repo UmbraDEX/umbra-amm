@@ -8,42 +8,22 @@ use crate::curve::fees::FEE_RATE_DENOMINATOR_VALUE;
 use anchor_lang::prelude::*;
 use instructions::*;
 
-#[cfg(not(feature = "no-entrypoint"))]
-solana_security_txt::security_txt! {
-    name: "raydium-cp-swap",
-    project_url: "https://raydium.io",
-    contacts: "link:https://immunefi.com/bounty/raydium",
-    policy: "https://immunefi.com/bounty/raydium",
-    source_code: "https://github.com/raydium-io/raydium-cp-swap",
-    preferred_languages: "en",
-    auditors: "https://github.com/raydium-io/raydium-docs/blob/master/audit/MadShield%20Q1%202024/raydium-cp-swap-v-1.0.0.pdf"
-}
-
-#[cfg(feature = "devnet")]
-declare_id!("CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW");
-#[cfg(not(feature = "devnet"))]
-declare_id!("CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C");
+declare_id!("CPMMQoayoCZGUq4wQRxrPBNrrExU6PLg1eEAXC83KDzv");
 
 pub mod admin {
-    use anchor_lang::prelude::declare_id;
-    #[cfg(feature = "devnet")]
-    declare_id!("adMCyoCgfkg7bQiJ9aBJ59H3BXLY3r5LNLfPpQfMzBe");
-    #[cfg(not(feature = "devnet"))]
-    declare_id!("GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ");
+    use anchor_lang::prelude::declare_id;    
+    declare_id!("8FeijbkxxXJEB1f14feTryJH5B57s8Jrx26nE1VuaTDA");
 }
 
 pub mod create_pool_fee_reveiver {
-    use anchor_lang::prelude::declare_id;
-    #[cfg(feature = "devnet")]
-    declare_id!("G11FKBRaAkHAKuLCgLM6K6NUc9rTjPAznRCjZifrTQe2");
-    #[cfg(not(feature = "devnet"))]
-    declare_id!("DNXgeM9EiiaAbaWvwjHj9fQQLAX5ZsfHyvmYUNRAdNC8");
+    use anchor_lang::prelude::declare_id;    
+    declare_id!("Bzsi8fW9x4ahRgC8xNdxrr5NNWm8DBSrQnE322vi1YWH");
 }
 
 pub const AUTH_SEED: &str = "vault_and_lp_mint_auth_seed";
 
 #[program]
-pub mod raydium_cp_swap {
+pub mod umbra_amm {
     use super::*;
 
     // The configuation of AMM protocol, include trade fee and protocol fee

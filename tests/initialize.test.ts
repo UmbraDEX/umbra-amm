@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program, BN } from "@coral-xyz/anchor";
-import { RaydiumCpSwap } from "../target/types/raydium_cp_swap";
+import { UmbraAmm } from "../target/types/umbra_amm";
 
 import { getAccount, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { setupInitializeTest, initialize, calculateFee } from "./utils";
@@ -11,7 +11,7 @@ describe("initialize test", () => {
   const owner = anchor.Wallet.local().payer;
   console.log("owner: ", owner.publicKey.toString());
 
-  const program = anchor.workspace.RaydiumCpSwap as Program<RaydiumCpSwap>;
+  const program = anchor.workspace.UmbraAmm as Program<UmbraAmm>;
 
   const confirmOptions = {
     skipPreflight: true,

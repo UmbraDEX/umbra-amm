@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program, BN } from "@coral-xyz/anchor";
-import { RaydiumCpSwap } from "../target/types/raydium_cp_swap";
+import { UmbraAmm } from "../target/types/umbra_amm";
 import {
   calculateFee,
   calculatePreFeeAmount,
@@ -15,7 +15,7 @@ describe("deposit test", () => {
   anchor.setProvider(anchor.AnchorProvider.env());
   const owner = anchor.Wallet.local().payer;
 
-  const program = anchor.workspace.RaydiumCpSwap as Program<RaydiumCpSwap>;
+  const program = anchor.workspace.UmbraAmm as Program<UmbraAmm>;
 
   const confirmOptions = {
     skipPreflight: true,
