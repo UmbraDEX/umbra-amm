@@ -2471,7 +2471,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "umbra-amm"
+name = "umbra_amm"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",

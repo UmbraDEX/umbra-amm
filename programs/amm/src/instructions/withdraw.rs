@@ -158,7 +158,9 @@ pub fn withdraw(
         token_1_amount: receive_token_1_amount,
         token_0_transfer_fee,
         token_1_transfer_fee,
-        change_type: 1
+        change_type: 1,
+        lp_change_amount: lp_token_amount,
+        payer: ctx.accounts.owner.key(),
     });
 
     if receive_token_0_amount < minimum_token_0_amount

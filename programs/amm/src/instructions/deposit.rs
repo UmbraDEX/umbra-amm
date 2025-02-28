@@ -149,7 +149,9 @@ pub fn deposit(
         token_1_amount,
         token_0_transfer_fee: transfer_token_0_fee,
         token_1_transfer_fee: transfer_token_1_fee,
-        change_type: 0
+        change_type: 0,
+        lp_change_amount: lp_token_amount,
+        payer: ctx.accounts.owner.key(),
     });
 
     if transfer_token_0_amount > maximum_token_0_amount

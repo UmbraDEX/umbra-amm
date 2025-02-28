@@ -19,6 +19,9 @@ pub struct LpChangeEvent {
     pub token_1_transfer_fee: u64,
     // 0: deposit, 1: withdraw
     pub change_type: u8,
+
+    pub lp_change_amount: u64,
+    pub payer: Pubkey,
 }
 
 /// Emitted when swap
